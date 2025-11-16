@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Bus Route Selector</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel">
+        <h1>Simple Bus Route Selector</h1>
+        <form id="route-form" class="form">
+          <label class="field">
+            <span>Origin</span>
+            <select id="origin" name="origin" required></select>
+          </label>
+          <label class="field">
+            <span>Destination</span>
+            <select id="destination" name="destination" required></select>
+          </label>
+          <button type="submit" class="submit-btn">Find Next Bus</button>
+        </form>
+      </section>
+      <section class="panel result" id="result-panel" aria-live="polite">
+        <h2>Upcoming Departure</h2>
+        <p id="status">Choose a route to see times.</p>
+        <div id="details" class="details hidden">
+          <div class="detail-item">
+            <span class="detail-label">Departure:</span>
+            <span id="departure-time"></span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Day:</span>
+            <span id="departure-day"></span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Route:</span>
+            <span id="selected-route"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
